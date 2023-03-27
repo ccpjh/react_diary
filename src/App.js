@@ -1,6 +1,8 @@
 import React, { useReducer, useRef } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
+import New from './pages/New';
 
 const reducer = (state, action) => {
     let newState = [];
@@ -121,9 +123,15 @@ function App() {
                     onRemove,
                 }}
             >
-                <div className="App">
-                    <Home />
-                </div>
+                <BrowserRouter>
+                    <div className="App">
+                    <Routes>
+                        <Route path='/' element={ <Home />}></Route>
+                        <Route path='/new' element={ <New />}></Route>
+                    </Routes>
+                    </div>
+
+                </BrowserRouter>
             </DiaryDispatchContext.Provider>
         </DiaryStateContext.Provider>
     );

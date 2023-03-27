@@ -22,7 +22,13 @@ body { font-family: 'Nanum Pen Script'; background-color: #f6f6f6; }
 
 /* Header */
 header { display:flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #e2e2e2; } 
-.header_txt {flex:2; font-size: 24px; text-align:center; } 
-.header_left_area{display:flex; flex:1; justify-content: flex-start;}
-.header_right_area{display:flex; flex:1; justify-content: flex-end;}
+.header_txt { flex:2; font-size: 24px; text-align:center; } 
+.header_left_area { display:flex; flex:1; justify-content: flex-start; } 
+.header_right_area { display:flex; flex:1; justify-content: flex-end; } 
 
+/* DiaryList */
+.diary_list .menu_wrapper { display:flex; justify-content: space-between; align-items: center; margin-top: 20px; margin-bottom: 30px; } 
+
+.diary_list .control_menu{ margin-right:10px; padding:10px 20px; border-radius:5px; font-size:18px; background-color:#ececec; cursor: pointer;}
+.diary_list .menu_wrapper .right_col { flex-grow: 1; } 
+.diary_list .menu_wrapper .right_col .button { width: 100%; } 
