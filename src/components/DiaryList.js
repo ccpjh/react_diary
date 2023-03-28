@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 import Button from './Button';
+import DiaryItem from "./DiaryItem";
 
 // 일기 정렬 값을 배열로 담는다.
 const sortOptionList = [
@@ -86,9 +87,7 @@ const DiaryList = ({ diaryList }) => {
             </div>
 
             {getProcessedDiaryList().map((el) => (
-                <div key={el.id}>
-                    {el.content} {el.emotion}
-                </div>
+                <DiaryItem key={el.id}  {...el} />
             ))}
         </div>
     );
