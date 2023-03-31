@@ -35,7 +35,7 @@ const Home = () => {
 
     // > 버튼을 클릭 했을 때 다음달로 이동
     const increaseMonth = () => {
-        setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, currentDate.getDate()));
+        setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1), currentDate.getDate());
     };
     //  < 버튼을 클릭 했을 때 이전달로 이동
     const decreaseMonth = () => {

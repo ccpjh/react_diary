@@ -16,7 +16,7 @@ const DiaryItem = ({ id, emotion, content, date }) => {
         <div className="diary_item">
             <Link to={`/diary/${id}`}>
                 <div className={['diary_img_area', `diary_img_area${emotion}`].join(' ')}>
-                    <img src={process.env.PUBLIC_URL + `assets/emotion${emotion}.png`} />
+                    <img src={process.env.PUBLIC_URL + `assets/emotion${emotion}.png`} alt=""/>
                 </div>
                 <div className="diary_info_area">
                     <span className="diary_date">{strDate}</span>
