@@ -52,7 +52,13 @@ export const getStringDate = (date) => {
 }
 
 const DiaryEditor = () => {
+    const [emotion, setEmotion] = useState(3);
+    const [content, setContent] = useState('');
     const [date, setDate] = useState(getStringDate(new Date()));
+
+    const handleClickEmotion = (emotion) => {
+        setEmotion(emotion);
+    }
 
     const navigate = useNavigate();
     return (
@@ -81,8 +87,24 @@ const DiaryEditor = () => {
                     <h3>오늘은 감정은?</h3>
                     <div className="input_box emotion_list_wrapper">
                         {emotionList.map((el) => (
-                            <EmotionItem key={el.emotion_id} {...el} />
+                            <EmotionItem key={el.emotion_id} {...el} onClick={(handleClickEmotion)} isSelected={el.emotion_id === emotion} />
                         ))}
+                    </div>
+                </section>
+
+                <section>
+                    <h3>오늘의 일기</h3>
+                    <div className="input_box text_wrapper">
+                        <textarea placeholder="오늘은 어땠나요?"></textarea>
+                    </div>
+                </section>
+
+                <section>
+                    <div className="control_box">
+                        <Button text={'취소하기'} onClick={() => {
+                            navigate(-1);
+                        }} />
+                        <Button text={'작성완료'} type={'positive'} />
                     </div>
                 </section>
             </div>
