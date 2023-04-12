@@ -101,7 +101,7 @@ const DiaryEditor = () => {
                 </section>
 
                 <section>
-                    <h3>오늘은 감정은?</h3>
+                    <h3>오늘의 감정은?</h3>
                     <div className="input_box emotion_list_wrapper">
                         {emotionList.map((el) => (
                             <EmotionItem key={el.emotion_id} {...el} onClick={handleClickEmotion} isSelected={el.emotion_id === emotion} />
