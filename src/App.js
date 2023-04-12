@@ -125,12 +125,11 @@ function App() {
             >
                 <BrowserRouter>
                     <div className="App">
-                    <Routes>
-                        <Route path='/' element={ <Home />}></Route>
-                        <Route path='/new' element={ <New />}></Route>
-                    </Routes>
+                        <Routes>
+                            <Route path="/" element={<Home />}></Route>
+                            <Route path="/new" element={<New />}></Route>
+                        </Routes>
                     </div>
-
                 </BrowserRouter>
             </DiaryDispatchContext.Provider>
         </DiaryStateContext.Provider>
