@@ -75,7 +75,7 @@ const DiaryEditor = () => {
             return;
         }
         onCreate(date, content, emotion);
-        navigate('/', { replace: true})
+        navigate('/', { replace: true}) // 뒤로 가기 방지
     };
 
     return (
