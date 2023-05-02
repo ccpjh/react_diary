@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import New from './pages/New';
+import Edit from './pages/Edit';
 
 const reducer = (state, action) => {
     let newState = [];
@@ -63,12 +64,6 @@ const dummyData = [
         content: '오늘의 일기 5번',
         date: 1680674908764,
     },
-    {
-        id: 6,
-        emotion: 2,
-        content: '오늘의 일기 6번',
-        date: 1689492246136,
-    },
 ];
 
 function App() {
@@ -128,6 +123,7 @@ function App() {
                         <Routes>
                             <Route path="/" element={<Home />}></Route>
                             <Route path="/new" element={<New />}></Route>
+                            <Route path="/edit/:id" element={<Edit />}></Route>
                         </Routes>
                     </div>
                 </BrowserRouter>
